@@ -13,17 +13,20 @@ for(let i = 1; i <=cantidadNumeros; i++){
     while(isNaN(numero)){
         numero = parseInt(prompt(`Atención tipo de dato incorrecto, ingrese un number. Ingrese n° ${i}`))
     }
-    //Mayor a 0 siempre
-    if(numero >=0){
+    //Function
+    function funcionUno(){
         total = total + numero
         console.log(`El resultado es ${total}`)
+    }
+    //Mayor a 0 siempre
+    if(numero >=0){
+    funcionUno();
     }else{
         while(numero < 0){
             numero = parseInt(prompt(`Atención ingrese un valor entre 0 y 10 para la nota n°${i}`))
         }
         //Es el promedio total de todos los numeros ingresados
-        total = total + numero
-        console.log(`El resultado es ${total}`)
+        funcionUno();
     }
 }
 let resultadoFinal = total / cantidadNumeros
